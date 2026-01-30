@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="About Ichthyosis · For Olivia">
+  <Header />
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">
+      About Ichthyosis
+    </h1>
+
+    <p class="mt-6 text-gray-700">
+      Ichthyosis is a group of genetic skin conditions. It often causes skin to
+      become very dry, thick, and prone to cracking. Severity varies from person
+      to person.
+    </p>
+
+    <h2 class="mt-10 text-xl font-semibold">Day-to-day impact</h2>
+    <ul class="mt-4 list-disc pl-5 text-gray-700 space-y-2">
+      <li>Regular moisturising and skin care routines</li>
+      <li>Managing discomfort, overheating, or sensitivity</li>
+      <li>Extra time and cost for daily care and products</li>
+      <li>Ongoing medical support depending on severity</li>
+    </ul>
+
+    <div class="mt-10 rounded-2xl border border-black/10 bg-white p-6">
+      <h3 class="font-semibold">Trusted resources</h3>
+      <p class="mt-2 text-gray-700 text-sm">
+        We’ll add links to trusted organisations here (e.g. Ichthyosis Support Group, NHS) once finalised.
+      </p>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

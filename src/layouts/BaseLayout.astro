@@ -1,15 +1,21 @@
 ---
 import "../styles/global.css";
-const { title = "For Olivia" } = Astro.props;
+
+const {
+  title = "For Olivia",
+  description = "Supporting families affected by ichthyosis through awareness, fundraising, and community events.",
+} = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
-  <body>
+
+  <body class="bg-white text-gray-900 antialiased">
     <slot />
   </body>
 </html>

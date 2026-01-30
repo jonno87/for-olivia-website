@@ -1,0 +1,39 @@
+---
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/olivias-story", label: "Olivia’s Story" },
+  { href: "/about-ichthyosis", label: "About Ichthyosis" },
+  { href: "/events", label: "Events" },
+  { href: "/updates", label: "Updates" },
+  { href: "/sponsors", label: "Sponsors" },
+  { href: "/contact", label: "Contact" },
+];
+
+const donateUrl =
+  "https://www.gofundme.com/f/changing-the-future-for-ichthyosis-for-our-olivia";
+---
+
+<header class="sticky top-0 z-40 border-b border-black/10 bg-white/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+    <a href="/" class="font-semibold tracking-tight text-lg no-underline">
+      For Olivia
+    </a>
+
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      {nav.map((i) => (
+        <a class="no-underline hover:underline" href={i.href}>
+          {i.label}
+        </a>
+      ))}
+    </nav>
+
+    <a
+      href={donateUrl}
+      target="_blank"
+      rel="noopener"
+      class="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+    >
+      Donate
+    </a>
+  </div>
+</header>
