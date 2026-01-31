@@ -4,31 +4,91 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="Olivia’s Story · For Olivia">
+<BaseLayout title="Olivia’s Story | Why For Olivia Exists" description="Learn about Olivia’s journey and why For Olivia was created to support families living with ichthyosis through awareness and fundraising.">
   <Header />
 
-  <main class="mx-auto max-w-3xl px-4 py-12">
-    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">
+<main class="bg-slate-50">
+  <div class="mx-auto max-w-3xl px-4 py-16">
+    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">
       Olivia’s Story
     </h1>
 
-    <p class="mt-6 text-gray-700">
-      Olivia lives with ichthyosis — a rare genetic skin condition that requires
-      constant care and can affect comfort, mobility, and day-to-day life.
-    </p>
+    <div class="mt-8 space-y-5 text-gray-700 leading-relaxed">
+      <p>
+        Olivia was born with a rare form of ichthyosis — a lifelong genetic skin condition that
+        affects only a small number of people worldwide. From the very beginning, she has shown a
+        strength and resilience that inspires everyone around her.
+      </p>
 
-    <p class="mt-4 text-gray-700">
-      For Olivia exists to raise awareness, support families facing similar
-      challenges, and fund initiatives that make a real difference.
-    </p>
+      <p>
+        Olivia spent the first months of her life in hospital before she was able to come home.
+        Living with ichthyosis means her skin requires constant care and protection. Everyday life
+        involves ongoing routines, careful management, and adapting to challenges that many families
+        never have to think about.
+      </p>
 
-    <div class="mt-8 rounded-2xl border border-black/10 bg-white p-6">
-      <p class="text-sm text-gray-600">
-        This page will be expanded over time. For now, we’re keeping details
-        respectful and focused on awareness.
+      <p>
+        Despite this, Olivia approaches life with warmth, determination, and a smile that lights up
+        the room.
       </p>
     </div>
-  </main>
+
+    <div class="mt-12 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-gray-900">Why For Olivia exists</h2>
+
+      <div class="mt-4 space-y-4 text-gray-700 leading-relaxed">
+        <p>
+          For Olivia was created to raise awareness of ichthyosis and to support families who are
+          living with the condition every day. Through community fundraising events and ongoing
+          support, the aim is to make a meaningful difference — not just for Olivia, but for others
+          affected by ichthyosis.
+        </p>
+
+        <p>
+          Funds raised through For Olivia support the <strong>Ichthyosis Support Group (ISG)</strong>,
+          which provides vital resources, community support, and funding for research into improved
+          treatments and long-term care.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-gray-900">How support helps</h2>
+
+      <ul class="mt-4 space-y-2 text-gray-700">
+        <li class="flex gap-3">
+          <span class="mt-2 h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>
+          <span>Fund research into better treatments and understanding of ichthyosis</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-2 h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>
+          <span>Support families navigating the daily realities of living with a rare condition</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-2 h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>
+          <span>Raise awareness so no family feels isolated or forgotten</span>
+        </li>
+      </ul>
+
+      <p class="mt-5 text-gray-700 leading-relaxed">
+        Every contribution, no matter the size, helps move things forward — one step at a time.
+      </p>
+    </div>
+
+  <div class="mt-12 text-base text-gray-700 leading-relaxed">
+    <p>
+      Thank you for taking the time to read Olivia’s story and for supporting families
+      living with ichthyosis.
+    </p>
+
+    <p class="mt-4 font-medium">
+      Love,<br />
+      Jack &amp; Sian
+    </p>
+  </div>
+  </div>
+</main>
+
 
   <Footer />
 </BaseLayout>

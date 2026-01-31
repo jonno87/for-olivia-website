@@ -7,30 +7,115 @@ import Footer from "../components/Footer.astro";
 <BaseLayout title="About Ichthyosis · For Olivia">
   <Header />
 
-  <main class="mx-auto max-w-3xl px-4 py-12">
-    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">
-      About Ichthyosis
-    </h1>
+  <main class="bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
+          About Ichthyosis
+        </h1>
 
-    <p class="mt-6 text-gray-700">
-      Ichthyosis is a group of genetic skin conditions. It often causes skin to
-      become very dry, thick, and prone to cracking. Severity varies from person
-      to person.
-    </p>
+        <p class="mt-5 text-lg md:text-xl text-gray-700 leading-relaxed">
+          Ichthyosis is a group of rare genetic skin conditions that affect how the skin grows and sheds.
+        </p>
 
-    <h2 class="mt-10 text-xl font-semibold">Day-to-day impact</h2>
-    <ul class="mt-4 list-disc pl-5 text-gray-700 space-y-2">
-      <li>Regular moisturising and skin care routines</li>
-      <li>Managing discomfort, overheating, or sensitivity</li>
-      <li>Extra time and cost for daily care and products</li>
-      <li>Ongoing medical support depending on severity</li>
-    </ul>
+        <p class="mt-3 text-gray-700 leading-relaxed">
+          It often causes skin to become very dry, thickened, and prone to cracking. Severity and daily
+          impact can vary widely — from mild discomfort to more complex, ongoing care needs.
+        </p>
+      </div>
 
-    <div class="mt-10 rounded-2xl border border-black/10 bg-white p-6">
-      <h3 class="font-semibold">Trusted resources</h3>
-      <p class="mt-2 text-gray-700 text-sm">
-        We’ll add links to trusted organisations here (e.g. Ichthyosis Support Group, NHS) once finalised.
-      </p>
+      <!-- Day-to-day impact -->
+      <section class="mt-12 max-w-3xl">
+        <h2 class="text-2xl font-semibold text-gray-900">Day-to-day impact</h2>
+
+        <div class="mt-6 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Regular moisturising and structured skin-care routines</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Managing discomfort, overheating, or skin sensitivity</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Extra time, planning, and cost for daily care and specialist products</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Ongoing medical support, depending on severity and type</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Why awareness matters -->
+      <section class="mt-12 max-w-3xl">
+        <h2 class="text-2xl font-semibold text-gray-900">Why awareness matters</h2>
+
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Because ichthyosis is rare, many people — including schools, workplaces, and even healthcare
+          professionals — may not immediately understand its impact.
+        </p>
+
+        <p class="mt-3 text-gray-700 leading-relaxed">
+          Raising awareness helps reduce misunderstanding, improves support, and ensures families don’t
+          feel isolated while navigating daily challenges.
+        </p>
+      </section>
+
+      <!-- Trusted resources -->
+      <section class="mt-12 max-w-3xl">
+        <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-gray-900">Trusted resources</h3>
+          <p class="mt-2 text-gray-700">
+            If you want to learn more, these are good starting points:
+          </p>
+
+          <ul class="mt-4 space-y-2">
+            <li>
+              <a
+                href="https://www.ichthyosis.org.uk"
+                target="_blank"
+                rel="noopener"
+                class="text-blue-700 font-semibold hover:underline underline-offset-4"
+              >
+                Ichthyosis Support Group (UK)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nhs.uk/conditions/ichthyosis/"
+                target="_blank"
+                rel="noopener"
+                class="text-blue-700 font-semibold hover:underline underline-offset-4"
+              >
+                NHS – Ichthyosis overview
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12">
+        <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="max-w-2xl">
+            <h3 class="text-lg font-semibold text-gray-900">Learn more about Olivia</h3>
+            <p class="mt-2 text-gray-700">
+              Read Olivia’s story and why For Olivia exists — plus how you can help.
+            </p>
+          </div>
+
+          <a
+            href="/olivias-story"
+            class="inline-flex h-11 items-center justify-center rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white no-underline shadow-sm hover:opacity-90"
+          >
+            Olivia’s story →
+          </a>
+        </div>
+      </section>
     </div>
   </main>
 
