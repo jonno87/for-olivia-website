@@ -2,24 +2,136 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
+import Section from "../components/Section.astro";
 ---
 
 <BaseLayout title="For Olivia">
   <Header />
 
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">For Olivia</h1>
-    <p class="mt-4 text-lg text-gray-700 max-w-2xl">
-      Giving hope to families living with ichthyosis through awareness, fundraising, and community events.
-    </p>
+  <main class="bg-slate-50">
+    <!-- HERO -->
+    <Section class="pt-16 pb-10">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-7">
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
+            For Olivia
+          </h1>
 
-    <div class="mt-8 rounded-2xl border border-black/10 bg-white p-6">
-      <h2 class="text-xl font-semibold">Next steps</h2>
-      <p class="mt-2 text-gray-700">
-        We’ll build out the full pages (Story, Events, Updates) next — one at a time.
-      </p>
-    </div>
+          <p class="mt-5 text-lg md:text-xl text-gray-700 leading-relaxed">
+            Supporting families affected by ichthyosis through fundraising, awareness,
+            and local community events.
+          </p>
+
+          <p class="mt-3 text-gray-600 leading-relaxed">
+            Created to support Olivia and others living with this rare genetic skin condition.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a
+              href="/events"
+              class="inline-flex h-11 items-center justify-center rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white no-underline shadow-sm hover:opacity-90"
+            >
+              View events
+            </a>
+            <a
+              href="https://www.gofundme.com/f/changing-the-future-for-ichthyosis-for-our-olivia"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex h-11 items-center justify-center rounded-xl bg-white px-6 text-sm font-semibold text-blue-700 no-underline ring-1 ring-blue-200 shadow-sm hover:bg-blue-50"
+            >
+              Donate
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+            <div class="text-sm text-gray-600">Next event</div>
+            <h3 class="mt-2 text-xl font-semibold text-gray-900">
+              Charity Football Match: Jack XI vs Cray XI
+            </h3>
+            <p class="mt-2 text-gray-700">
+              16 May · Shrewton Recreation Ground
+            </p>
+            <a
+              href="/events/shrewton-charity-match"
+              class="mt-4 inline-flex text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
+            >
+              Event details →
+            </a>
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <!-- WHY -->
+    <Section title="Why For Olivia exists">
+      <div class="max-w-3xl">
+        <p class="text-gray-700 leading-relaxed">
+          Ichthyosis is a rare genetic skin condition that often requires constant care
+          and can significantly affect comfort, mobility, and daily life.
+        </p>
+        <p class="mt-3 text-gray-700 leading-relaxed">
+          For Olivia was created to raise funds, increase awareness, and bring
+          communities together to support families affected by the condition.
+        </p>
+      </div>
+    </Section>
+
+    <!-- ACTIONS -->
+    <Section title="How you can help">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold">Attend an event</h3>
+          <p class="mt-3 text-gray-700 leading-relaxed">
+            Join local community events that raise awareness and vital funds.
+          </p>
+          <a
+            href="/events"
+            class="mt-4 inline-flex text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
+          >
+            View events →
+          </a>
+        </div>
+
+        <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold">Support the cause</h3>
+          <p class="mt-3 text-gray-700 leading-relaxed">
+            Donate or help spread awareness of ichthyosis and its impact.
+          </p>
+          <a
+            href="https://www.gofundme.com/f/changing-the-future-for-ichthyosis-for-our-olivia"
+            target="_blank"
+            rel="noopener"
+            class="mt-4 inline-flex text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
+          >
+            Donate →
+          </a>
+        </div>
+
+        <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold">Stay informed</h3>
+          <p class="mt-3 text-gray-700 leading-relaxed">
+            Follow progress, milestones, and upcoming events.
+          </p>
+          <a
+            href="/updates"
+            class="mt-4 inline-flex text-sm font-semibold text-blue-700 hover:underline underline-offset-4"
+          >
+            View updates →
+          </a>
+        </div>
+      </div>
+    </Section>
+
+    <!-- TRUST -->
+    <Section class="pt-0">
+      <div class="max-w-3xl text-sm text-gray-600">
+        All funds raised go toward supporting families affected by ichthyosis
+        and related awareness efforts.
+      </div>
+    </Section>
   </main>
-	<Footer />	
+
+  <Footer />
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import Section from "../../components/Section.astro";
 
 const donateUrl =
   "https://www.gofundme.com/f/changing-the-future-for-ichthyosis-for-our-olivia";
@@ -10,126 +11,131 @@ const donateUrl =
 <BaseLayout title="Charity Football Match · For Olivia">
   <Header />
 
- <main class="bg-slate-50">
-  <div class="mx-auto max-w-4xl px-4 py-12">
-    <div class="text-sm text-gray-600">16 May · Shrewton Recreation Ground</div>
-
-    <h1 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">
-      Charity Football Match: Jack XI vs Cray XI
-    </h1>
-
-    <p class="mt-5 text-gray-700 max-w-2xl">
-      Join us for a family-friendly day out — football, fundraising, and community spirit.
-      We’re raising money to support families affected by ichthyosis.
-    </p>
-
-    <div class="mt-8 grid gap-6 lg:grid-cols-3">
-      <!-- Left: How you can help -->
-      <div class="lg:col-span-2 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-        <h2 class="text-xl font-semibold">How you can help</h2>
-
-        <ul class="mt-4 space-y-3 text-gray-700">
-          <li class="flex gap-3">
-            <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
-            <span>Come along and donate at the gate</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
-            <span>Take part in the raffle / football card</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
-            <span>Share the event with friends</span>
-          </li>
-        </ul>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a
-            class="inline-flex h-10 items-center justify-center rounded-xl bg-blue-600 px-5 text-sm font-semibold text-white no-underline hover:opacity-90"
-            href={donateUrl}
-            target="_blank"
-            rel="noopener"
-          >
-            Donate
-          </a>
-          <a
-            class="inline-flex h-10 items-center justify-center rounded-xl bg-white px-5 text-sm font-semibold text-blue-700 no-underline ring-1 ring-blue-200 hover:bg-blue-50"
-            href="#register"
-          >
-            Register interest
-          </a>
-        </div>
-      </div>
-
-      <!-- Right: Key details -->
-      <aside class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-        <h2 class="text-xl font-semibold">Event details</h2>
-        <dl class="mt-4 space-y-3 text-sm text-gray-700">
-          <div>
-            <dt class="font-semibold text-gray-900">Date</dt>
-            <dd>16 May</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-gray-900">Location</dt>
-            <dd>Shrewton Recreation Ground</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-gray-900">Teams</dt>
-            <dd>Jack XI vs Cray XI</dd>
-          </div>
-        </dl>
-      </aside>
-    </div>
-
-    <!-- Register -->
-    <div id="register" class="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-      <h2 class="text-xl font-semibold">Register your interest</h2>
-      <p class="mt-2 text-gray-700">
-        Leave your details and we’ll send updates and reminders.
-      </p>
-
-      <form
-        class="mt-5 grid gap-4 sm:max-w-xl"
-        name="event-interest"
-        method="POST"
-        data-netlify="true"
-        >
-        <input type="hidden" name="form-name" value="event-interest" />
-        <input type="hidden" name="event" value="Shrewton Charity Match" />
-        <label class="grid gap-1 text-sm">
-          <span class="text-gray-700">Name</span>
-          <input
-            class="h-10 rounded-xl border border-black/15 bg-white px-3"
-            name="name"
-            required
-          />
-        </label>
-
-        <label class="grid gap-1 text-sm">
-          <span class="text-gray-700">Email</span>
-          <input
-            class="h-10 rounded-xl border border-black/15 bg-white px-3"
-            type="email"
-            name="email"
-            required
-          />
-        </label>
-
-        <button
-          class="h-10 w-fit rounded-xl bg-blue-600 px-5 text-sm font-semibold text-white hover:opacity-90"
-          type="submit"
-        >
-          Notify me
-        </button>
-
-        <p class="text-xs text-gray-600">
-          (We’ll wire this to Netlify forms later once you deploy.)
+  <main class="bg-slate-50">
+    <Section class="pt-16 pb-10">
+      <div class="max-w-4xl">
+        <div class="text-sm text-gray-600">16 May · Shrewton Recreation Ground</div>
+        <h1 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">
+          Charity Football Match: Jack XI vs Cray XI
+        </h1>
+        <p class="mt-5 text-gray-700 leading-relaxed max-w-2xl">
+          Join us for a family-friendly day out — football, fundraising, and community spirit.
+          We’re raising money to support families affected by ichthyosis.
         </p>
-      </form>
-    </div>
-  </div>
-</main>
+      </div>
+    </Section>
 
+    <Section class="pt-0">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <!-- Main -->
+        <div class="lg:col-span-2 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h2 class="text-xl font-semibold text-gray-900">How you can help</h2>
+
+          <ul class="mt-4 space-y-3 text-gray-700">
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Come along and donate at the gate</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Take part in the raffle / football card</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span>
+              <span>Share the event with friends</span>
+            </li>
+          </ul>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              class="inline-flex h-11 items-center justify-center rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white no-underline shadow-sm hover:opacity-90"
+              href={donateUrl}
+              target="_blank"
+              rel="noopener"
+            >
+              Donate
+            </a>
+
+            <a
+              class="inline-flex h-11 items-center justify-center rounded-xl bg-white px-6 text-sm font-semibold text-blue-700 no-underline ring-1 ring-blue-200 shadow-sm hover:bg-blue-50"
+              href="#register"
+            >
+              Register interest
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h2 class="text-xl font-semibold text-gray-900">Event details</h2>
+
+          <dl class="mt-4 space-y-4 text-sm text-gray-700">
+            <div>
+              <dt class="font-semibold text-gray-900">Date</dt>
+              <dd>16 May</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-gray-900">Location</dt>
+              <dd>Shrewton Recreation Ground</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-gray-900">Teams</dt>
+              <dd>Jack XI vs Cray XI</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </Section>
+
+    <Section class="pt-0">
+      <div id="register" class="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-gray-900">Register your interest</h2>
+        <p class="mt-2 text-gray-700">
+          Leave your details and we’ll send updates and reminders.
+        </p>
+
+        <form
+          class="mt-5 grid gap-4 sm:max-w-xl"
+          name="event-interest"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="event-interest" />
+          <input type="hidden" name="event" value="Shrewton Charity Match" />
+
+          <label class="grid gap-1 text-sm">
+            <span class="text-gray-700">Name</span>
+            <input
+              class="h-11 rounded-xl border border-black/15 bg-white px-3"
+              name="name"
+              required
+            />
+          </label>
+
+          <label class="grid gap-1 text-sm">
+            <span class="text-gray-700">Email</span>
+            <input
+              class="h-11 rounded-xl border border-black/15 bg-white px-3"
+              type="email"
+              name="email"
+              required
+            />
+          </label>
+
+          <button
+            class="inline-flex h-11 w-fit items-center justify-center rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white shadow-sm hover:opacity-90"
+            type="submit"
+          >
+            Notify me
+          </button>
+
+          <p class="text-xs text-gray-600">
+            Privacy: we only use your details to send event updates.
+          </p>
+        </form>
+      </div>
+    </Section>
+  </main>
 
   <Footer />
 </BaseLayout>

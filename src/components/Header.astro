@@ -13,27 +13,35 @@ const donateUrl =
   "https://www.gofundme.com/f/changing-the-future-for-ichthyosis-for-our-olivia";
 ---
 
-<header class="sticky top-0 z-40 border-b border-black/10 bg-white/80 backdrop-blur">
+<header class="sticky top-0 z-40 border-b border-black/10 bg-white/85 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-    <a href="/" class="font-semibold tracking-tight text-lg no-underline">
+    <a
+      href="/"
+      class="no-underline font-semibold tracking-tight text-[15px] sm:text-base"
+    >
       For Olivia
     </a>
 
-    <nav class="hidden md:flex items-center gap-5 text-sm">
+    <nav class="hidden md:flex items-center gap-4 text-sm">
       {nav.map((i) => (
-        <a class="no-underline hover:underline" href={i.href}>
+        <a
+          href={i.href}
+          class="no-underline text-gray-700 hover:text-gray-900 hover:underline underline-offset-4"
+        >
           {i.label}
         </a>
       ))}
     </nav>
 
-    <a
-      href={donateUrl}
-      target="_blank"
-      rel="noopener"
-      class="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
-    >
-      Donate
-    </a>
+    <div class="flex items-center gap-2">
+      <a
+        href={donateUrl}
+        class="inline-flex h-10 items-center justify-center rounded-xl bg-blue-600 px-4 text-sm font-semibold text-white no-underline shadow-sm hover:opacity-90"
+        rel="noopener"
+        target="_blank"
+      >
+        Donate
+      </a>
+    </div>
   </div>
 </header>
