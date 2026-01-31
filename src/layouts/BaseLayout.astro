@@ -3,16 +3,40 @@ import "../styles/global.css";
 
 const {
   title = "For Olivia",
-  description = "Supporting families affected by ichthyosis through awareness, fundraising, and community events.",
+  description = "Supporting families affected by ichthyosis through fundraising, awareness, and local community events.",
+  ogImage = "/og.png",
 } = Astro.props;
+
+// Canonical URL (works best when astro.config.mjs has `site:` set)
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).toString()
+  : Astro.url.toString();
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="For Olivia" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={Astro.site ? new URL(ogImage, Astro.site).toString() : ogImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={Astro.site ? new URL(ogImage, Astro.site).toString() : ogImage} />
   </head>
 
   <body class="min-h-screen bg-slate-50 text-gray-900 antialiased">
@@ -22,5 +46,4 @@ const {
       </div>
     </div>
   </body>
-
 </html>
