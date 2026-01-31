@@ -42,6 +42,30 @@ const donateUrl =
       >
         Donate
       </a>
+
+      <!-- Mobile menu button (shows on mobile only) -->
+      <details class="relative md:hidden">
+        <summary
+          class="list-none inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white text-gray-900 shadow-sm hover:bg-slate-50"
+          aria-label="Open menu"
+        >
+          ☰
+        </summary>
+
+        <div class="absolute right-0 mt-2 w-64 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-lg">
+          <div class="p-2">
+            {nav.map((i) => (
+              <a
+                href={i.href}
+                class="block rounded-xl px-3 py-2 text-sm font-medium text-gray-800 no-underline hover:bg-slate-50"
+              >
+                {i.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </details>
     </div>
+
   </div>
 </header>
