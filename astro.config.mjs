@@ -1,14 +1,11 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://tranquil-queijadas-f4d3bb.netlify.app/",
-
+  site: "https://www.forolivia.co.uk",
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
-
-  integrations: [sitemap()],
 });
